@@ -54,7 +54,6 @@ export default class Item extends Lightning.Component {
     _init() {
         this._angle = 0.001;
         this._ratingNumber = 0;
-
         this._focusAnimation = this.tag("Rating").animation({
             duration: 1.2, stopDuration: .2, stopMethod: "immediate", actions:[
                 {t: 'RatingCircle', p:'shader.angle', rv: 0.0001, v: () => {

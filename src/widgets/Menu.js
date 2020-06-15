@@ -54,13 +54,24 @@ export default class Menu extends Lightning.Component {
     }
 
     _handleEnter(){
-        const item = this.activeItem;
+        this.onItemClick();
+    }
 
+    onItemClick(){
+        const item = this.activeItem;
         if(item.url === "exit"){
             this.application.closeApp();
         }else if(item.url){
             Router.navigate(item.url);
         }
+    }
+
+    _handleTouchStart(){
+        this.onItemClick();
+    }
+
+    _handleTouchMove(){
+
     }
 
     _handleLeft() {

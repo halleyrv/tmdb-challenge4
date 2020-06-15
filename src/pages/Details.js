@@ -42,6 +42,7 @@ export default class Details extends Lightning.Component{
         };
     }
 
+
     _active() {
         this.application.emit("setItem", this._details);
 
@@ -67,7 +68,6 @@ export default class Details extends Lightning.Component{
     set itemId(v){
         this._itemId = v;
     }
-
 
     set details(v) {
         this._details = v;
@@ -100,7 +100,7 @@ export default class Details extends Lightning.Component{
     }
 
     _handleEnter(){
-        Router.navigate(`details/${this._itemType}/${this._itemId}/play`);
+        Router.navigate(`details/${this._itemType}/${this._itemId}/play`, {a:1, b:2, ref:this});
     }
 
     _getFocused() {

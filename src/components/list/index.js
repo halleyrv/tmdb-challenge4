@@ -10,7 +10,7 @@ export default class List extends Lightning.Component {
                     x: {duration: .3, timingFunction: 'cubic-bezier(0.20, 1.00, 0.80, 1.00)'}
                 }
             },
-            Focus: {
+            Indicator: {
                 alpha: 0, x: -32, y: 102, colorLeft: 0xff8ecea2, colorRight: 0xff03b3e4,
                 texture: Lightning.Tools.getRoundRect(236, 344, 16, 6, 0xffffffff, true, 0x00ffffff)
             },
@@ -26,6 +26,7 @@ export default class List extends Lightning.Component {
                     text: {fontSize: 32, fontFace: "SourceSansPro-Regular", wordWrapWidth: 960, maxLines: 1}
                 }
             }
+
         }
     }
 
@@ -104,14 +105,14 @@ export default class List extends Lightning.Component {
 
     _focus(){
         this.patch({
-            Focus:{smooth:{alpha:1}},
+            Indicator:{smooth:{alpha:1}},
             Metadata:{smooth:{alpha:1}}
         });
     }
 
     _unfocus(){
         this.patch({
-            Focus:{smooth:{alpha:0}},
+            Indicator:{smooth:{alpha:0}},
             Metadata:{smooth:{alpha:0}}
         });
     }

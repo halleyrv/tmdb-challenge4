@@ -21,15 +21,15 @@ export default () => {
      */
 
     Router.before("home/browse/movies", async ({page})=>{
-        page.data = await getPopular('movie');;
+        page.data = await getPopular('movie');
     }, 10 * 60 /* expires */);
 
     Router.before("home/browse/series", async ({page})=>{
-        page.data =  await getPopular('tv');;
+        page.data = await getPopular('tv');
     }, 10 * 60 /* expires */);
 
     Router.before("details/:itemType/:itemId", async ({page, itemType, itemId})=>{
-        page.details = await getDetails(itemType, itemId);;
+        page.details = await getDetails(itemType, itemId);
     });
 
     Router.before("details/:itemType/:itemId/play", async ({page, itemType, itemId})=>{

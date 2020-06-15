@@ -16,8 +16,14 @@
     "showVersion": false,
     "inspector": false,
     "gcOnUnload": true,
-    "lazyCreate": true,
-    "lazyDestroy": true,
+    "lazyCreate": false,
+    "lazyDestroy": false,
+    "quality": {
+      "animation": true,
+      "transitions": false,
+      "imageQuality": 50,
+      "shaders": false
+    },
     "reuseInstance": true,
     "logRoute": true
   }
